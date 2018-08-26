@@ -1,0 +1,30 @@
+stripe:
+  sk: sk_test_UGB4pIQZoWqn8DGbDjvEJYj2
+server:
+  tomcat:
+    remote_ip_header: x-forwarded-for
+    protocol_header: x-forwarded-proto
+#  port: 80
+  port: 8080
+  session:
+    timeout: 172800
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/rejoice
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        max_fetch_depth: 1
+  data:
+    rest:
+      base-path: /api
+  mvc:
+    favicon:
+      enabled: true
